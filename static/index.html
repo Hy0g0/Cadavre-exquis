@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Collective Storyteller</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Collective Storyteller</h1>
+        <p>
+          Read the latest sentence and keep the story going by adding the next
+          one.
+        </p>
+      </header>
+
+      <section class="current-sentence">
+        <h2>Latest Sentence</h2>
+        <blockquote id="currentSentence">
+          Loading the story...
+        </blockquote>
+        <p class="meta">
+          Contributed by <span id="currentAuthor">—</span>
+        </p>
+      </section>
+
+      <section class="new-entry">
+        <h2>Add Your Sentence</h2>
+        <p class="limit-note">
+          To keep things fair, you can add one sentence per day.
+        </p>
+        <form id="sentenceForm">
+          <label for="sentenceInput">Your sentence</label>
+          <textarea
+            id="sentenceInput"
+            name="sentence"
+            rows="3"
+            required
+            placeholder="Write the next sentence..."
+          ></textarea>
+
+          <label for="nameInput">Your name</label>
+          <input
+            id="nameInput"
+            name="name"
+            type="text"
+            placeholder="How should we credit you?"
+          />
+
+          <label class="checkbox">
+            <input id="anonymousInput" name="anonymous" type="checkbox" />
+            Remain anonymous
+          </label>
+
+          <button type="submit">Submit sentence</button>
+        </form>
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
+
